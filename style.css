@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.todo-app {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-button {
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#addTask {
+    background-color: blue;
+}
+
+#pendingTask {
+    background-color: orange;
+}
+
+#showTask {
+    background-color: green;
+}
+
+#deleteTask {
+    background-color: red;
+}
+
+#addTask:hover {
+    background-color: #003d99;
+}
+
+#pendingTask:hover {
+    background-color: #cc6e00;
+}
+
+#showTask:hover {
+    background-color: #005700;
+}
+
+#deleteTask:hover {
+    background-color: #c00000;
+}
+
+.top-button:active {
+    transform: scale(.95);
+}
+
+#input {
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    font-size: 15px;
+    max-width: calc(100% - 220px);
+    margin: 10px 0;
+    display: inline-block;
+}
+
+#input:focus {
+    border-color: blue;
+    outline: none;
+}
+
+.list-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    border-bottom: solid 1px #ddd;
+}
+
+.todo-data {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.list-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.list-items:last-child {
+    border-bottom: none;
+}
+
+.todo-no,
+.todo-items,
+.todo-status,
+.todo-action {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.todo-no {
+    flex-basis: 5%;
+}
+
+.todo-items {
+    flex-basis: 60%;
+    text-align: start;
+}
+
+.todo-status {
+    flex-basis: 20%;
+}
+
+.todo-action {
+    flex-basis: 20%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.todo-button {
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 0.2s;
+}
+
+#editTodo {
+    background-color: #ffc107;
+}
+
+#deleteTodo {
+    background-color: #dc3545;
+}
+
+#completeTodo {
+    background-color: #28a745;
+}
+
+#editTodo:hover {
+    background-color: #e0a800;
+}
+
+#deleteTodo:hover {
+    background-color: #c82333;
+}
+
+#completeTodo:hover {
+    background-color: #218838;
+}
+
+.todo-button:active {
+    transform: scale(.95);
+}
+
+.todo-data {
+    display: none;
+}
