@@ -1,24 +1,37 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
-
+html , body {
+    height: 100%;
+    width: 100%;
+}
 .todo-app {
-    width: 900px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    overflow-x: hidden !important;
+}
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.input-bar input {
+    display: inline-block;
 }
 
 .top-button {
     color: white;
     border: none;
-    padding: 10px;
+    padding: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 1.5vw;
+    margin-right: 0.2rem;
 }
 
 #addTask {
@@ -60,10 +73,10 @@ body {
 #input {
     border: solid 2px black;
     border-radius: 5px;
-    padding: 10px;
+    padding: 7px;
     background-color: white;
-    font-size: 15px;
-    max-width: calc(100% - 220px);
+    font-size: 14px;
+    /* max-width: calc(100% - 220px); */
     margin: 10px 0;
     display: inline-block;
 }
@@ -117,7 +130,7 @@ body {
 }
 
 .todo-status {
-    flex-basis: 20%;
+    flex-basis: 25%;
 }
 
 .todo-action {
@@ -172,4 +185,47 @@ hr {
 
 .todo-data {
     display: none;
+}
+
+@media (min-width:601px) and (max-width:1200px) {
+    .todo-action {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    .todo-app {
+        overflow-x: hidden !important;
+    }
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 10px;
+    }
+    .top-button {
+        padding: 10px;
+        font-size: 2.4vw;
+    }
+    .todo-action {
+        text-align: center;
+        padding: 0 10px;
+    }
+    .todo-button {
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        margin: 2px auto;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+        transition: background-color 0.2s;
+    }
+    #editTodo {
+        padding: 5px 25px;
+    }
+    .todo-data {
+        margin-top: 3vh;
+    }
 }
